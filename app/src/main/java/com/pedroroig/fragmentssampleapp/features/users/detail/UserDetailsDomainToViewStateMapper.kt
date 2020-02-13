@@ -9,7 +9,8 @@ class UserDetailsDomainToViewStateMapper {
             UserDetailsFragmentViewState(
                 name,
                 job,
-                bio
+                bio,
+                imageId
             )
         }
 

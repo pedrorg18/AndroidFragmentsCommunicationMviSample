@@ -13,6 +13,7 @@ import com.pedroroig.fragmentssampleapp.R
 import com.pedroroig.fragmentssampleapp.features.users.MainViewModel
 import kotlinx.android.synthetic.main.fragment_user_details.*
 
+
 class UserDetailsFragment : Fragment() {
 
     private val vm: MainViewModel by lazy {
@@ -42,8 +43,13 @@ class UserDetailsFragment : Fragment() {
             text_user_subtitle.text = subTitle
             text_user_under_picture.text = longText
             image_user.visibility = VISIBLE
+            image_user.setImageResource(getImageId(viewState.imageId))
         }
+    }
 
+    private fun getImageId(imageName: String): Int {
+        return context!!.resources
+            .getIdentifier("drawable/$imageName", null, context!!.packageName)
     }
 
 }
