@@ -1,4 +1,4 @@
-package com.pedroroig.fragmentssampleapp.features.users
+package com.pedroroig.fragmentssampleapp.features.users.list
 
 import com.pedroroig.fragmentssampleapp.domain.model.User
 

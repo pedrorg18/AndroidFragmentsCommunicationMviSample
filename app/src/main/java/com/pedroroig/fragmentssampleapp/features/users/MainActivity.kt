@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.pedroroig.fragmentssampleapp.*
+import com.pedroroig.fragmentssampleapp.features.users.list.UserListFragment
 import com.pedroroig.fragmentssampleapp.utils.launchFragmentReplacing
 
 class MainActivity : AppCompatActivity() {

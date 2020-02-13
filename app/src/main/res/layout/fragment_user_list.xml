@@ -10,5 +10,5 @@
     android:layout_marginTop="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".features.users.UserListFragment"
+    tools:context=".features.users.list.UserListFragment"
     tools:listitem="@layout/user_list_row_item" />

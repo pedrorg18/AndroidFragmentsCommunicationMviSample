@@ -1,4 +1,4 @@
-package com.pedroroig.fragmentssampleapp.features.users
+package com.pedroroig.fragmentssampleapp.features.users.list
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.pedroroig.fragmentssampleapp.R
+import com.pedroroig.fragmentssampleapp.features.users.MainViewModel
 
 /**
  * A fragment representing a list of users.
@@ -27,7 +28,7 @@ class UserListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_usermodel_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_user_list, container, false)
 
         initRecyclerView(view as RecyclerView)
 
@@ -59,7 +60,7 @@ class UserListFragment : Fragment() {
         }
     }
 
-    private val elementClickListener: (String) -> Unit = {
+    private val elementClickListener: (Int) -> Unit = {
         Toast.makeText(context, "click user: $it", Toast.LENGTH_SHORT).show()
         vm.loadUserDetail(it)
     }

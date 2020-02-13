@@ -1,4 +1,4 @@
-package com.pedroroig.fragmentssampleapp.features.users
+package com.pedroroig.fragmentssampleapp.features.users.list
 
 
 import android.view.LayoutInflater
@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.user_list_row_item.view.*
  */
 class UserListRecyclerViewAdapter(
     private var values: List<String>,
-    private val clickListener: (String) -> Unit
+    private val clickListener: (Int) -> Unit
 ) : RecyclerView.Adapter<UserListRecyclerViewAdapter.ViewHolder>() {
 
 
@@ -31,7 +31,7 @@ class UserListRecyclerViewAdapter(
 
         with(holder.rootView) {
             setOnClickListener {
-                clickListener(user)
+                clickListener(position)
             }
         }
     }
