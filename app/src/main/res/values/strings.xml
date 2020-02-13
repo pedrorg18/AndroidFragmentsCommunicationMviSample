@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FragmentsSampleApp</string>
+    <string name="cd_user_picture">user picture</string>
 </resources>

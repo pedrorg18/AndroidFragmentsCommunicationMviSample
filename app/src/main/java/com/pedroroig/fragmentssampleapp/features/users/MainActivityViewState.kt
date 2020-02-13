@@ -8,4 +8,5 @@ sealed class MainActivityViewState {
 
 sealed class MainActivityViewContent {
     object ShowUserList : MainActivityViewContent()
+    object ShowUserDetails : MainActivityViewContent()
 }
