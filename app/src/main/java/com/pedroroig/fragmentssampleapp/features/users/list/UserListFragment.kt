@@ -37,7 +37,7 @@ class UserListFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-        vm.userListFragmentViewStateLiveData.observe(activity!!, Observer<UserListFragmentViewState> {
+        vm.userListFragmentViewStateLiveData.observe(viewLifecycleOwner, Observer<UserListFragmentViewState> {
                 viewState ->
             render(viewState)
         })
