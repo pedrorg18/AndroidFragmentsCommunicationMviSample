@@ -71,6 +71,9 @@ class MainActivity : AppCompatActivity() {
         launchFragmentReplacing(
             UserDetailsFragment(),
             R.id.container_fragment_main,
-            supportFragmentManager, true)
+            supportFragmentManager,
+            addToBackStack = true,
+            doSlideInOutAnimation = true
+        )
     }
 }

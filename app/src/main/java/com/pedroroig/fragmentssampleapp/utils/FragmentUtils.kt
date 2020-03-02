@@ -2,6 +2,7 @@ package com.pedroroig.fragmentssampleapp.utils
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.pedroroig.fragmentssampleapp.R
 
 /**
  * Show the fragment if already created. If not, create it
@@ -53,10 +54,18 @@ fun createFragment(
 
 /**
  * inserts the given fragment into the given container ID. It replaces previous fragment if any
+ *
+ * @param doSlideInOutAnimation if true perform animation entering new fragment from the right.
+ * When popping it, il will exit to the right
  */
 fun launchFragmentReplacing(frag: Fragment, fragContainerId: Int, fragmentManager: FragmentManager,
-                            addToBackStack: Boolean = true) {
+                            addToBackStack: Boolean = true,
+                            doSlideInOutAnimation: Boolean = false) {
     val transaction = fragmentManager.beginTransaction()
+
+    if(doSlideInOutAnimation)
+        transaction.setCustomAnimations(R.anim.slide_in_from_right, 0, 0,
+            R.anim.slide_out_to_right)
 
     transaction.replace(fragContainerId, frag)
     if(addToBackStack)
